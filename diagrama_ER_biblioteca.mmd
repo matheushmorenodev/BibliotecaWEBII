@@ -1,0 +1,42 @@
+erDiagram
+  USUARIO {
+    INT id PK
+    VARCHAR nome
+    VARCHAR email
+    VARCHAR tipo
+  }
+  LIVRO {
+    INT id PK
+    VARCHAR titulo
+    INT ano
+    INT id_categoria FK
+  }
+  AUTOR {
+    INT id PK
+    VARCHAR nome
+  }
+  CATEGORIA {
+    INT id PK
+    VARCHAR nome
+  }
+  LIVRO_AUTOR {
+    INT id_livro PK, FK
+    INT id_autor PK, FK
+  }
+  EMPRESTIMO {
+    INT id PK
+    INT id_usuario FK
+    DATE data_emprestimo
+    DATE data_devolucao
+  }
+  EMPRESTIMO_LIVRO {
+    INT id_emprestimo PK, FK
+    INT id_livro PK, FK
+  }
+  
+  USUARIO ||--o{ EMPRESTIMO : "faz"
+  EMPRESTIMO ||--o{ EMPRESTIMO_LIVRO : "inclui"
+  LIVRO ||--o{ EMPRESTIMO_LIVRO : "emprestado em"
+  LIVRO ||--o{ LIVRO_AUTOR : "escrito por"
+  AUTOR ||--o{ LIVRO_AUTOR : "escreve"
+  LIVRO }o--|| CATEGORIA : "pertence a" 

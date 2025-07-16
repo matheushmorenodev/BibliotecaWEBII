@@ -1,0 +1,46 @@
+<?php
+// index.php - Menu principal
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - Menu Principal</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f6f8fa; margin: 0; padding: 0; }
+        .container { max-width: 500px; margin: 60px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px #0001; padding: 32px 40px; }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 32px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 18px 0; }
+        a.menu-btn {
+            display: block;
+            background: #2980b9;
+            color: #fff;
+            padding: 14px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+            box-shadow: 0 1px 4px #0001;
+        }
+        a.menu-btn:hover { background: #1a5e8a; }
+        hr { margin: 32px 0 16px 0; border: none; border-top: 1px solid #eee; }
+        .footer { text-align: center; color: #888; font-size: 0.98em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Biblioteca</h1>
+        <ul>
+            <li><a class="menu-btn" href="usuarios.php">Visualizar Usuários</a></li>
+            <li><a class="menu-btn" href="livros.php">Visualizar Livros</a></li>
+            <li><a class="menu-btn" href="emprestimos.php">Visualizar Empréstimos</a></li>
+            <li><a class="menu-btn" href="consultas.php">Consultas Especiais</a></li>
+        </ul>
+        <hr>
+        <div class="footer">Integrantes: Pedro Galhardi, Matheus Moreno</div>
+    </div>
+</body>
+</html> 
